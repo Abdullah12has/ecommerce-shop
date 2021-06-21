@@ -1,0 +1,46 @@
+.loginForm{
+display: flex;
+flex-direction: column;
+width: 30%;
+padding: 2%;
+align-items: center;
+
+}
+.lbuttonGroup{
+    display: flex;
+flex-direction: row;
+
+}
+
+.btn{
+    width: 180px !important;
+    height: 50px;
+    margin: 10px !important;
+    background-color: black !important;
+    margin-top: 50px !important;
+}
+.btn2{
+    width: 200px !important;
+    height: 50px;
+    margin: 10px !important;
+    margin-top: 50px !important;
+   
+}
+.loginMain{
+    display: flex;
+flex-direction: row;
+padding: 30px;
+align-items: center;
+width: 100%;
+}
+.logintf{
+    width: 80%;
+    margin:10px;
+    padding: 10px;
+}
+
+.subtitleLogin{
+    font-size: large;
+    color:darkgray;
+    
+}

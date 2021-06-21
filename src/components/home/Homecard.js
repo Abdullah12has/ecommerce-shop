@@ -3,7 +3,7 @@ import "../../styles/homecard.styles.css";
 
 const Homecard = ({ id, title, imageUrl, size }) => {
   return (
-    <div className={`${size} outer`}>
+    <div className={`${size} outerh`}>
       <div
         className="bgImage"
         style={{

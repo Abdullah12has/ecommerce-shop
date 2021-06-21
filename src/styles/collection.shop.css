@@ -1,0 +1,19 @@
+
+
+  .items{
+    display: flex;
+    justify-content: space-between;
+    width:80%;
+   
+  }
+
+.collection{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.titlee {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }

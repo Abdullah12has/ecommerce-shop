@@ -1,0 +1,26 @@
+.htitle{
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+}
+.header{
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-self: center;
+}
+.hlogo{
+    height: 100%;
+    width: 70px;
+    padding: 25px;
+}
+.hsideGroup{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 30px;
+}

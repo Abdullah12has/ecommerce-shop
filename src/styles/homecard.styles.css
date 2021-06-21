@@ -1,4 +1,4 @@
-.outer {
+.outerh {
   min-width: 30%;
   height: 240px;
   flex: 1 1 auto;
@@ -18,7 +18,7 @@
   background-size: cover;
   background-position: center;
 }
-.outer:hover > .bgImage {
+.outerh:hover > .bgImage {
   transform: scale(2);
   transition: transform 30s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -35,7 +35,7 @@
   border: 1px solid black;
   position: absolute;
 }
-.outer:hover > .inner {
+.outerh:hover > .inner {
   opacity: 0.9;
 }
 
@@ -49,17 +49,17 @@
   font-weight: lighter;
   font-size: 16px;
 }
-.outer .large {
+.outerh .large {
   height: 580px;
 }
-.outer .small {
+.outerh .small {
   height: 380px;
 }
 
-.outer:first-child {
+.outerh:first-child {
   margin-right: 7.5px;
 }
 
-.outer:last-child {
+.outerh:last-child {
   margin-left: 7.5px;
 }

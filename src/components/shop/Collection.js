@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "../../styles/collection.shop.css";
-
+import CollectionItem from "./CollectionItem";
 const Collection = ({ title, items }) => (
   <div className="collection">
-    <h1 className="title">{title} </h1>
+    <h1 className="titlee">{title} </h1>
     <div className="items">
       {items
         .filter((item, i) => i < 4)
-        .map((itm) => (
-          <div key={itm.id}>{itm.name} </div>
+        .map(({id, ...rest}) => (
+        <CollectionItem key={id} {...rest} />  
         ))}
     </div>
   </div>
