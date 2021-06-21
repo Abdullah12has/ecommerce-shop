@@ -2,36 +2,65 @@ import React, { Component } from "react";
 import "../styles/signin.css";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-export default class SignIn extends Component {
+import { signInWithGoogle } from "../firebase/firebase.setup";
 
-constructor(props){
-super(props);
-this.state = {
-    email:'',
-    password:''
-}
-}
+
+export default class SignIn extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: "",
+    };
+  }
+
+  submitHandler = (event) => {
+    event.preventDefault();
+    this.setState({ email: "", password: "" });
+  };
+
+  changeHandler = (event) => {
+    const { value, name } = event.target;
+    this.setState({ [name]: value });
+    console.log(value);
+  };
 
   render() {
     return (
       <div className="loginMain">
-        <form className="loginForm" noValidate autoComplete="on">
-          <h1 >I already have an account</h1>
-          <span className='subtitleLogin'>Sign In with your email and password</span>
-          <TextField value={this.state.email} className="logintf" id="standard-basic" label="Email" />
+        <form
+          onSubmit={this.submitHandler}
+          className="loginForm"
+          noValidate
+          autoComplete="on"
+        >
+          <h1>I already have an account</h1>
+          <span className="subtitleLogin">
+            Sign In with your email and password
+          </span>
           <TextField
+            value={this.state.email}
+            onChange={this.changeHandler}
+            className="logintf"
+            id="standard-basic"
+            label="Email"
+            name='email'
+          />
+          <TextField
+            onChange={this.changeHandler}
             className="logintf"
             label="Password"
             type="password"
             id="standard-password-input"
             label="Password"
-            value={this.state.password}
+            name='password'
+            // value={this.state.password}
           />
           <div className="lbuttonGroup">
             <Button className="btn" variant="contained" color="secondary">
               Sign In
             </Button>
-            <Button className="btn2" variant="contained" color="primary">
+            <Button onClick={signInWithGoogle} className="btn2" variant="contained" color="primary">
               Sign In with Google
             </Button>
           </div>
@@ -39,7 +68,9 @@ this.state = {
 
         <form className="loginForm" noValidate autoComplete="on">
           <h1>I do not have an account</h1>
-          <span className='subtitleLogin'>Sign Up with your email and password</span>
+          <span className="subtitleLogin">
+            Sign Up with your email and password
+          </span>
           <TextField
             className="logintf"
             id="standard-basic"
