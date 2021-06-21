@@ -26,7 +26,7 @@ export default class App extends Component {
     return (
       <div>
         <BrowserRouter>
-          <Header />
+          <Header user={this.state.user} />
           <Switch>
             <Route exact path="/" component={Home} />
 
