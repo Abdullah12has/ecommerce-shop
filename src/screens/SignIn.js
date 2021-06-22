@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import { signInWithGoogle } from "../firebase/firebase.setup";
 import SignUp from "../components/signin/SignUp";
-
+import { auth } from "../firebase/firebase.setup";
 
 export default class SignIn extends Component {
   constructor(props) {
@@ -15,9 +15,17 @@ export default class SignIn extends Component {
     };
   }
 
-  submitHandler = (event) => {
+  submitHandler = async event => {
     event.preventDefault();
-    this.setState({ email: "", password: "" });
+    const { email, password} = this.state;
+
+    try{
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({ email: "",
+      password: "",})
+    }catch(e){
+      console.error(e);
+    }
   };
 
   changeHandler = (event) => {
@@ -55,10 +63,10 @@ export default class SignIn extends Component {
             id="standard-password-input"
             label="Password"
             name='password'
-            // value={this.state.password}
+            value={this.state.password}
           />
           <div className="lbuttonGroup">
-            <Button className="btn" variant="contained" color="secondary">
+            <Button type='submit'  className="btn" variant="contained" color="secondary">
               Sign In
             </Button>
             <Button onClick={signInWithGoogle} className="btn2" variant="contained" color="primary">

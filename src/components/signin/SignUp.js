@@ -27,11 +27,8 @@ export default class SignUp extends Component {
         email,
         password
       );
-      await createUserProfileDoc(user, { displayName:name });
-      this.setState({  name: "",
-      email: "",
-      password: "",
-      confirmPassword: "",})
+      await createUserProfileDoc(user, { displayName: name });
+      this.setState({ name: "", email: "", password: "", confirmPassword: "" });
     } catch (e) {
       console.error(e);
     }
@@ -40,7 +37,6 @@ export default class SignUp extends Component {
   changeHandler = (event) => {
     const { value, name } = event.target;
     this.setState({ [name]: value });
-    console.log(value);
   };
 
   render() {
@@ -91,7 +87,12 @@ export default class SignUp extends Component {
             value={this.state.confirmPassword}
             onChange={this.changeHandler}
           />
-          <Button type='submit' className="btn" variant="contained" color="secondary">
+          <Button
+            type="submit"
+            className="btn"
+            variant="contained"
+            color="secondary"
+          >
             Sign Up
           </Button>
         </form>
