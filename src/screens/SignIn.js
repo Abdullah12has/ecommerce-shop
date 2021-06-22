@@ -3,6 +3,7 @@ import "../styles/signin.css";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import { signInWithGoogle } from "../firebase/firebase.setup";
+import SignUp from "../components/signin/SignUp";
 
 
 export default class SignIn extends Component {
@@ -22,7 +23,7 @@ export default class SignIn extends Component {
   changeHandler = (event) => {
     const { value, name } = event.target;
     this.setState({ [name]: value });
-    console.log(value);
+    
   };
 
   render() {
@@ -66,33 +67,9 @@ export default class SignIn extends Component {
           </div>
         </form>
 
-        <form className="loginForm" noValidate autoComplete="on">
-          <h1>I do not have an account</h1>
-          <span className="subtitleLogin">
-            Sign Up with your email and password
-          </span>
-          <TextField
-            className="logintf"
-            id="standard-basic"
-            label="Display Name"
-          />
-          <TextField className="logintf" id="standard-basic" label="Email" />
-          <TextField
-            className="logintf"
-            label="Password"
-            type="password"
-            id="standard-password-input"
-          />
-          <TextField
-            className="logintf"
-            label="Confirm Password"
-            type="password"
-            id="standard-password-input"
-          />
-          <Button className="btn" variant="contained" color="secondary">
-            Sign Up
-          </Button>
-        </form>
+        <SignUp/>
+
+       
       </div>
     );
   }

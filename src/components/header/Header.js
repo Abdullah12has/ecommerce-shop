@@ -14,9 +14,9 @@ const Header = ({user}) => (
       <Link className="htitle" to='/shop' >Algebra Shop</Link>
       {
         user ?
-        <Link onClick={()=>auth.signOut()} className="htitle" to=''>SIGN OUT</Link>
+        <Link onClick={()=>auth.signOut()} className="htitle" to=''>Sign Out</Link>
         :
-        <Link className="htitle" to='/signin'>SIGN IN</Link>
+        <Link className="htitle" to='/signin'>Sign In</Link>
 
       }
       
