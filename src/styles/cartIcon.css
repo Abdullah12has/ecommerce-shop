@@ -1,0 +1,19 @@
+.shoppingIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.countItem {
+  position: absolute;
+  bottom: 10px;
+}
+
+.cartIcon {
+  cursor: grab;
+  height: 48px;
+  width: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,13 +1,13 @@
-const initState = {
-  user: null,
+const INIT_STATE = {
+  cuser: null,
 };
 
-const userReducer = (state = initState, action) => {
+const userReducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "SET_USER":
       return {
         ...state,
-        user: action.payload
+        cuser: action.payload
       };
     default:
       return state;

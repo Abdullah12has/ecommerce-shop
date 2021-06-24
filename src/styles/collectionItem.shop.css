@@ -1,27 +1,50 @@
 .image {
-    width:100%;
-      height: 100%;
-    background-size: cover;
-    background-position: center;
-  }
-  .outerCI {
-      height: 260px;
-    width: 24%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 7px;
-  }
-  .footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 95%;
-    padding: 2px;
-  }
-  
-  .name{
-     
-      margin-bottom: 15px;
-  }
-  
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.outerCI {
+  height: 260px;
+  width: 24%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 7px;
+  position: relative;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+  padding: 2px;
+}
+
+.name {
+  margin-bottom: 15px;
+}
+
+.btn4 {
+  width: 160px !important;
+  height: 90px !important;
+
+  border-radius: 5px;
+  opacity: 0 !important;
+  position: absolute !important;
+  top: 100px !important;
+  display: none;
+  background-color: white !important;
+}
+.btn4:hover {
+  opacity: 0.5 !important;
+  background-color: white !important;
+  color: black;
+  font-weight: bold;
+}
+.btn4:hover > .image{
+  opacity: 0.8;
+}
