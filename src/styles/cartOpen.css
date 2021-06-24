@@ -6,11 +6,11 @@
   margin-top: auto !important;
 }
 
-.cartItem {
-  height: 240px;
+.cartItems {
+  height: 238px;
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  overflow: scroll;
 }
 .cartOpen {
   position: absolute;

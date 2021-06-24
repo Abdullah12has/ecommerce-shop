@@ -52,17 +52,14 @@ class App extends Component {
       </div>
     );
   }
-
 }
 
 //not working when i connect this idk why
-const mapStateToProps = ({user}) => ({
-  
-  cuser: userReducer.user.cuser
- 
+const mapStateToProps = ({ user:{cuser} }) => ({
+  cuser
 });
 
 const mapDispatchToProps = (dispatch) => ({
   setUser: (user) => dispatch(setUser(user)),
 });
-export default connect(null,  mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);
