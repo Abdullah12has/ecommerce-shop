@@ -54,7 +54,7 @@ class App extends Component {
   }
 }
 
-//not working when i connect this idk why
+//stupid mistake here -_-
 const mapStateToProps = ({ user:{cuser} }) => ({
   cuser
 });
@@ -62,4 +62,4 @@ const mapStateToProps = ({ user:{cuser} }) => ({
 const mapDispatchToProps = (dispatch) => ({
   setUser: (user) => dispatch(setUser(user)),
 });
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

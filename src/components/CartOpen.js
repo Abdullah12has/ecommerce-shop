@@ -23,7 +23,7 @@ const CartOpen = ({ cartItems }) => (
     </Button>
   </div>
 );
-// same problem
+
 const mapStateToProps = ({ cart: { cartItems } }) => ({
   cartItems,
 });
