@@ -8,6 +8,7 @@ import SignIn from "./screens/SignIn";
 import { auth, createUserProfileDoc } from "./firebase/firebase.setup";
 import { setUser } from "./redux/userActions";
 import userReducer from "./redux/userReducer";
+import Hats from "./screens/Hats";
 
 class App extends Component {
   DeAuth = null;
@@ -40,7 +41,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
 
-            <Route path="/shop" component={Shop} />
+            <Route exact path="/shop" component={Shop} />
+            <Route path="/shop/hats" component={Hats} />
             <Route
               path="/signin"
               render={() =>
@@ -55,8 +57,8 @@ class App extends Component {
 }
 
 //stupid mistake here -_-
-const mapStateToProps = ({ user:{cuser} }) => ({
-  cuser
+const mapStateToProps = ({ user: { cuser } }) => ({
+  cuser,
 });
 
 const mapDispatchToProps = (dispatch) => ({
