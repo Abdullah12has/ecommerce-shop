@@ -42,7 +42,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
 
             <Route exact path="/shop" component={Shop} />
-            <Route path="/shop/hats" component={Hats} />
+            <Route path="/shop/*" component={Hats} />
             <Route
               path="/signin"
               render={() =>

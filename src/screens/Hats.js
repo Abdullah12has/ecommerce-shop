@@ -1,31 +1,31 @@
 import React from "react";
 import shopData from "../assets/collections";
 import CollectionItem from "../components/shop/CollectionItem";
-import "../styles/shop.shop.css";
-class Hats extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+import "../styles/collection.shop.css";
+import "../styles/hats.collections.css";
+const Hats = (props) => {
+  console.log(props.location.pathname);
 
-  render() {
-    return (
-      <div className="shopCollection">
-        {shopData
-          .filter((item) => item.id === 1)
+  return (
+    <div className="shopCollection">
+      {shopData
+        .filter(
+          (item) => item.routeName === /[^/]*$/.exec(props.location.pathname)[0]
+        )
+        .map(({ title, items }) => (
+          <div className="collection">
+            <h1 className="titlee">{title} </h1>
 
-          .map(({ title, items }) => (
-            <div className="collection">
-              <h1 className="titlee">{title} </h1>
-              <div className="items">
-                {items.map((item) => (
-                  <CollectionItem key={item.id} item={item} />
-                ))}
-              </div>
+          
+            <div className="hcollections">
+              {items.map((item) => (
+                <CollectionItem key={item.id} item={item} />
+              ))}
             </div>
-          ))}
-      </div>
-    );
-  }
-}
+          </div>
+        ))}
+    </div>
+  );
+};
 
 export default Hats;
