@@ -4,7 +4,6 @@ import CollectionItem from "../components/shop/CollectionItem";
 import "../styles/collection.shop.css";
 import "../styles/hats.collections.css";
 const Hats = (props) => {
-  console.log(props.location.pathname);
 
   return (
     <div className="shopCollection">
@@ -13,7 +12,7 @@ const Hats = (props) => {
           (item) => item.routeName === /[^/]*$/.exec(props.location.pathname)[0]
         )
         .map(({ title, items }) => (
-          <div className="collection">
+          <div key={title} className="collection">
             <h1 className="titlee">{title} </h1>
 
           

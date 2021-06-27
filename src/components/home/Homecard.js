@@ -1,19 +1,27 @@
 import React from "react";
 import "../../styles/homecard.styles.css";
+import { Link } from "react-router-dom";
 
 const Homecard = ({ id, title, imageUrl, size }) => {
+  const lnk = `/shop/${title.toLowerCase()}` ;
   return (
     <div className={`${size} outerh`}>
       <div
         className="bgImage"
         style={{
-          backgroundImage: `url(${imageUrl})`
+          backgroundImage: `url(${imageUrl})`,
         }}
       />
-      <div className="inner">
-        <h1 className="title">{title}</h1>
+
+      <Link
+        style={{ textDecoration: "none" }}
+        className="inner"
+        to={lnk}
+      >
+        <h1 className="title">{title.toUpperCase()}</h1>
+
         <span className="subtitle">SHOP NOW</span>
-      </div>
+      </Link>
     </div>
   );
 };
