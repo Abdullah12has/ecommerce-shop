@@ -21,7 +21,7 @@ const CartOpen = ({ cartItems, dispatch }) => {
           className="btn3"
           variant="contained"
           color="secondary"
-          // onClick={dispatch(toggleCart())} // this refreshes and data is lost so need to solve both the things
+          onClick={() => {dispatch(toggleCart())}} 
         >
           GO TO CHECKOUT
         </Button>
