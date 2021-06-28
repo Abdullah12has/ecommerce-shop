@@ -19,3 +19,11 @@
   border-bottom: 0.5px solid darkgrey;
   padding: 30px;
 }
+.totalCheckout{
+
+  font-size: 30px;
+  display: flex;
+  margin-left: 80%;
+  margin-top: 3%;
+
+}

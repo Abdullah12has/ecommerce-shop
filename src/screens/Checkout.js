@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import "../styles/checkout.css";
 import { connect } from "react-redux";
 const Checkout = ({ cartItems }) => {
+  let x = 0;
+  cartItems.map((item) => (x += parseInt(item.price * item.quantity)));
   return (
     <div className="checkoutMain">
       <div className="coHeader">
@@ -17,8 +19,7 @@ const Checkout = ({ cartItems }) => {
           <CheckoutItem key={item.id} item={item} />
         ))}
       </div>
-
-      <div>Total: </div>
+      <div className='totalCheckout'>Total: {x} €</div>
     </div>
   );
 };
