@@ -1,4 +1,4 @@
-import { addItemToCartHelper } from "./cart.helper";
+import { addItemToCartHelper, reduceFromCartHelper } from "./cart.helper";
 
 const INITIAL = {
   hidden: true,
@@ -16,6 +16,18 @@ const cartReducer = (state = INITIAL, action) => {
         ...state,
         cartItems: addItemToCartHelper(state.cartItems, action.payload),
       };
+    case "DELETE_FROM_CART":
+      return {
+        ...state,
+        cartItems: state.cartItems.filter(
+          (item) => item.id !== action.payload.id
+        ),
+      };
+      case 'REDUCE_FROM_CART':
+        return{
+          ...state,
+        cartItems: reduceFromCartHelper(state.cartItems, action.payload),
+        }
     default:
       return state;
   }

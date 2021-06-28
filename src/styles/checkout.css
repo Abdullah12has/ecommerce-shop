@@ -1,0 +1,21 @@
+.checkoutMain {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 20px;
+  /* align-items: center; */
+}
+
+.cspan {
+  font-weight: bold;
+  font-size: 16px;
+  padding: 6%;
+  
+}
+
+.coHeader {
+  margin-left: 20%;
+  border-bottom: 0.5px solid darkgrey;
+  padding: 30px;
+}
