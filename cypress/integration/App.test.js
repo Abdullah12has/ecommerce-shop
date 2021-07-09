@@ -9,7 +9,7 @@ describe("renders the Home page", () => {
   it("has all the buttons and clicks working  + header components", () => {
     cy.get("#Triangle").click();
     cy.get('[href="/shop"]').click();
-    cy.get('[href="/signin"]').click();
+    // cy.get('[href="/signin"]').should("exist").click();
     cy.get(".hlogo > svg").click();
     cy.get(".countItem").click();
     cy.get(".countItem").click();

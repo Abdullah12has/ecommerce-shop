@@ -4,7 +4,6 @@ describe("renders the login page ", () => {
   });
 
   it("sigin with email and password", () => {
-  
     cy.visit("/signin");
     cy.get(
       ".loginMain > :nth-child(1) > :nth-child(3) > .MuiInputBase-root > #standard-basic"
@@ -14,8 +13,11 @@ describe("renders the login page ", () => {
 
     cy.get(":nth-child(4) > .MuiInputBase-root > #standard-password-input")
       .click()
-      .type("aaaaaa");
+      .type("aaaaaa")
+      .wait(1000);
 
-    return cy.get(".lbuttonGroup > .btn ").click();
+    cy.get(".lbuttonGroup > .btn ").click();
+
+    cy.contains("Sign Out").should("exist");
   });
 });
