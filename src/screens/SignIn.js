@@ -31,7 +31,6 @@ export default class SignIn extends Component {
   changeHandler = (event) => {
     const { value, name } = event.target;
     this.setState({ [name]: value });
-    
   };
 
   render() {

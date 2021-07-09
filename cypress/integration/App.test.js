@@ -1,3 +1,5 @@
+//HAS UNIT, INTEGRATION, UI, & AUTOMATION TESTS
+
 describe("renders the Home page", () => {
   it("renders correctly", () => {
     cy.visit("/");
@@ -13,5 +15,4 @@ describe("renders the Home page", () => {
     cy.get(".countItem").click();
     cy.get(":nth-child(1) > .inner").click();
   });
-
 });
