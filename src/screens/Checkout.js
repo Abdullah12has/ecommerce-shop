@@ -2,9 +2,9 @@ import CheckoutItem from "../components/checkout/Item.checkout";
 import React, { Component } from "react";
 import "../styles/checkout.css";
 import { connect } from "react-redux";
-const Checkout = ({ cartItems }) => {
+const Checkout = ({ cartItems }) => {  //state of checkout stays constent and it is made it a new object everytime there are changes
   let x = 0;
-  cartItems.map((item) => (x += parseInt(item.price * item.quantity)));
+  cartItems.map((item) => (x += parseInt(item.price * item.quantity))); // functional programming being used there returning function 
   return (
     <div className="checkoutMain">
       <div className="coHeader">
