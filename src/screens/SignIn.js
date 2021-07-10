@@ -15,15 +15,14 @@ export default class SignIn extends Component {
     };
   }
 
-  submitHandler = async event => {
+  submitHandler = async (event) => {
     event.preventDefault();
-    const { email, password} = this.state;
+    const { email, password } = this.state;
 
-    try{
+    try {
       await auth.signInWithEmailAndPassword(email, password);
-      this.setState({ email: "",
-      password: "",})
-    }catch(e){
+      this.setState({ email: "", password: "" });
+    } catch (e) {
       console.error(e);
     }
   };
@@ -52,7 +51,7 @@ export default class SignIn extends Component {
             className="logintf"
             id="standard-basic"
             label="Email"
-            name='email'
+            name="email"
           />
           <TextField
             onChange={this.changeHandler}
@@ -61,22 +60,30 @@ export default class SignIn extends Component {
             type="password"
             id="standard-password-input"
             label="Password"
-            name='password'
+            name="password"
             value={this.state.password}
           />
           <div className="lbuttonGroup">
-            <Button type='submit'  className="btn" variant="contained" color="secondary">
+            <Button
+              type="submit"
+              className="btn"
+              variant="contained"
+              color="secondary"
+            >
               Sign In
             </Button>
-            <Button onClick={signInWithGoogle} className="btn2" variant="contained" color="primary">
+            <Button
+              onClick={signInWithGoogle}
+              className="btn2"
+              variant="contained"
+              color="primary"
+            >
               Sign In with Google
             </Button>
           </div>
         </form>
 
-        <SignUp/>
-
-       
+        <SignUp />
       </div>
     );
   }
