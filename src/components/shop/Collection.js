@@ -6,7 +6,7 @@ const Collection = ({ title, items }) => (
     <h1 className="titlee">{title} </h1>
     <div className="items">
       {items
-        .filter((item, i) => i < 4)
+        .filter((item, i) => i < 4) //this is a functional way 
         .map((item) => (
         <CollectionItem key={item.id} item={item} />  
         ))}

@@ -2,6 +2,8 @@ import React from "react";
 import "../../styles/homecard.styles.css";
 import { Link } from "react-router-dom";
 
+// component is functional 
+
 const Homecard = ({ id, title, imageUrl, size }) => {
   const lnk = `/shop/${title.toLowerCase()}` ;
   return (

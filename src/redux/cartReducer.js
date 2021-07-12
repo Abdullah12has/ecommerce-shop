@@ -1,5 +1,5 @@
 import { addItemToCartHelper, reduceFromCartHelper } from "./cart.helper";
-
+// Another functional programming ccomponent since everytime it makes a new object
 const INITIAL = {
   hidden: true,
   cartItems: [],

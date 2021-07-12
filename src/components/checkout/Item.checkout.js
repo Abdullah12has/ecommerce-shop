@@ -7,6 +7,8 @@ import {
   addToCart,
 } from "../../redux/cartAction";
 
+// this compoentent is completely functional 
+
 const CheckoutItem = ({ reduceItem, addItem, deleteItem, item }) => {
   const { imageUrl, name, price, quantity } = item;
   return (
