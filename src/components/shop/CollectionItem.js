@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
-import Collection from "./Collection";
 import "../../styles/collectionItem.shop.css";
 import { Button } from "@material-ui/core";
 import { addToCart } from "../../redux/cartAction";

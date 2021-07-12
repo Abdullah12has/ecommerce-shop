@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Button from "@material-ui/core/Button";
 import "../styles/cartOpen.css";
 import CartItem from "./Item.cart";

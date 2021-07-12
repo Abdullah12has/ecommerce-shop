@@ -1,6 +1,5 @@
-import { Hidden } from "@material-ui/core";
-import { createStore, applyMiddleware } from "redux";
-import logger from "redux-logger";
+import { createStore } from "redux";
+
 import rootReducer from "./rootReducer";
 
 const state = localStorage.getItem("reduxState")

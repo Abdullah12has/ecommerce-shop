@@ -59,7 +59,7 @@ export default class SignIn extends Component {
             label="Password"
             type="password"
             id="standard-password-input"
-            label="Password"
+          
             name="password"
             value={this.state.password}
           />

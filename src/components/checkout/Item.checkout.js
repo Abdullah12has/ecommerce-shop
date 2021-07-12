@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "../../styles/item.checkout.css";
 import { connect } from "react-redux";
 import {
@@ -14,7 +14,7 @@ const CheckoutItem = ({ reduceItem, addItem, deleteItem, item }) => {
   return (
     <div className="itemMain">
       <div className="itemImage">
-        <img src={imageUrl} />
+        <img alt={"item to buy"} src={imageUrl} />
       </div>
       <span className="COname">{name} </span>
       <span className="COquantity">

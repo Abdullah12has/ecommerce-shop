@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import homePageData from "../../assets/home_page";
 import Homecard from "./Homecard";
 import "../../styles/homeContainer.styles.css";

@@ -1,5 +1,5 @@
 import CheckoutItem from "../components/checkout/Item.checkout";
-import React, { Component } from "react";
+import React from "react";
 import "../styles/checkout.css";
 import { connect } from "react-redux";
 

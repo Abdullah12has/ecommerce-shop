@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "../../styles/collection.shop.css";
 import CollectionItem from "./CollectionItem";
 const Collection = ({ title, items }) => (
@@ -13,5 +13,4 @@ const Collection = ({ title, items }) => (
     </div>
   </div>
 );
-
 export default Collection;
