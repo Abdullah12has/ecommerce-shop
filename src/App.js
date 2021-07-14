@@ -20,6 +20,13 @@ import Checkout from "./screens/Checkout";
 // Functional Programming 
 // converted class components to functional components some screens (others are difficult to convert so didn't convert all of them), used maps, filter, and consts instead of let. Reducers make a new object on change 
 
+// AOP is being implemented in the Redux part as the crosscutting concern of handling states and storing the data is being shared over multiple classes and objects. Those objects are not concerned with how the data is being stored. 
+
+// Firebase firestore is another aspect that is sending user data from different classes to the backend of firebase 
+// Signed in part is also spread of different screens and classes so that aspect also not restricted to one class
+// Actions in redux are the join points and reducers are the Advice
+// Storage part of the app is an aspect that spreads across all the pages and stores their data in local storage
+
 
 
 
