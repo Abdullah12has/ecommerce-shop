@@ -10,7 +10,7 @@ import { setUser } from "./redux/userActions";
 import Hats from "./screens/Hats";
 import Checkout from "./screens/Checkout";
 
-// SOLID_________
+// _____SOLID_________
 // follows single responsibility principle each component is has a single functionality Reducers, actions, UI components 
 // objects like React.Component, screens/hats are open for extension but closed for modification
 // follows Liskov Substitution Principle. child classes can replace the parent classes like any can replace react.Component because their the children classes 
@@ -26,8 +26,6 @@ import Checkout from "./screens/Checkout";
 // Signed in part is also spread of different screens and classes so that aspect also not restricted to one class
 // Actions in redux are the join points and reducers are the Advice
 // Storage part of the app is an aspect that spreads across all the pages and stores their data in local storage
-
-
 
 
 
